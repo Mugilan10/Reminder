@@ -1,15 +1,15 @@
-from time import *                                                                                                                                                       # Required for using sleep()
+from time import *                                                                                                              # Required for using sleep() and asctime()
 import tkinter
 from tkinter import messagebox
 root=tkinter.Tk()
-root.withdraw()                                                                                                                                                             # Creates a tkinter window in background.
+root.withdraw()                                                                                                                 # Creates a tkinter window in background.
 x=True
-current_time=asctime()                                                                                                                                                # Retrieves current day, date and time
+current_time=asctime()                                                                                                          # Retrieves current day, date and time
 print('Welcome to The RemindeR program')
 sleep(1)
-print('The current day and time is:', current_time)                                                                                                        # Displays current day, date and time
+print('The current day and time is:', current_time)                                                                             # Displays current day, date and time
 sleep(1)
-Note=input('Enter what you would like to be reminded about : ')                                                                                 # Asks for the information; to be reminded.
+Note=input('Enter what you would like to be reminded about : ')                                                                 # Asks for the information; to be reminded.
 sleep(1)
 print('Ok. Noted')
 while(x):
@@ -21,9 +21,9 @@ while(x):
         print('The RemindeR is set to the default time interval that is 1 hour')
         print('You can minimise the program if you need to.')
         sleep(3600)
-        messagebox.showinfo("Reminder",Note)                                                                                                              # Tkinter window displays the reminder.
+        messagebox.showinfo("Reminder",Note)                                                                                    # Tkinter window displays the reminder.
         sleep(1)
-        exit_option=input(print('Do you want to set another RemindeR ?(y/n) '))                                                             # Confirmation dialogue is being asked.
+        exit_option=input(print('Do you want to set another RemindeR ?(y/n) '))                                                 # Confirmation dialogue is being asked.
         if(exit_option=='Y' or exit_option=='y'):
             continue
         else:
@@ -32,7 +32,7 @@ while(x):
     elif(menu_option=='B' or menu_option=='b'):
         sleep(1)
         while(x):
-            sub_menu_option=input('Do you want to input the time interval in minutes(M or m) or hours(H or h) ?')       # Secondary menu is displayed.
+            sub_menu_option=input('Do you want to input the time interval in minutes(M or m) or hours(H or h) ?')               # Secondary menu is displayed.
             if(sub_menu_option=='M' or sub_menu_option=='m'):
                 sleep(1)
                 minutes=eval(input('How many minutes after should I remind you ?'))
@@ -40,9 +40,9 @@ while(x):
                 print('Ok. The RemindeR is set for ',minutes,' minute(s)')
                 print('You can minimise the program if you need to.')
                 sleep(minutes*60)
-                messagebox.showinfo("Reminder",Note)                                                                                                     # Tkinter window displays the reminder.
+                messagebox.showinfo("Reminder",Note)                                                                           # Tkinter window displays the reminder.
                 sleep(1)
-                exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))          # Confirmation dialogue is being asked.
+                exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))             # Confirmation dialogue is being asked.
                 if(exit_option=='Y' or exit_option=='y'):
                     continue
                 else:
@@ -55,9 +55,9 @@ while(x):
                 print('Ok. The RemindeR is set after ',int(hours),' hours ',int(minutes1),' minutes ',int(seconds),' seconds')
                 print('You can minimise the program if you need to.')
                 sleep(seconds)
-                messagebox.showinfo("Reminder",Note)                                                                                                     # Tkinter window displays the reminder.
+                messagebox.showinfo("Reminder",Note)                                                                           # Tkinter window displays the reminder.
                 sleep(1)
-                exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))          # Confirmation dialogue is being asked.
+                exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))             # Confirmation dialogue is being asked.
                 if(exit_option=='Y' or exit_option=='y'):
                     continue
                 else:
@@ -72,6 +72,6 @@ while(x):
         print('The option you have entered is invalid.')
         sleep(1)
         print('Please enter only the given options.')
-        sleep(1)                                                                                                                                                                #Returns user back to the primary menu.
+        sleep(1)                                                                                                               # Returns user back to the primary menu.
 print('Thank you for trying out the RemindeR')
 print('Glad to be of your service')
