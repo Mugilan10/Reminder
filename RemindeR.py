@@ -1,5 +1,5 @@
 from time import *                                                                                                              # Required for using sleep() and asctime()
-import winsound
+import winsound                                                                                                                 # Required for using winsound.playsound.
 import tkinter
 from tkinter import messagebox
 root=tkinter.Tk()
@@ -22,7 +22,7 @@ while(x):
         print('The RemindeR is set to the default time interval that is 1 hour')
         print('You can minimise the program if you need to.')
         sleep(3600)
-        winsound.PlaySound('sound.wav',winsound.SND_FILENAME)
+        winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                                   # Alert sound is played through PC speaker.
         messagebox.showinfo("Reminder",Note)                                                                                    # Tkinter window displays the reminder.
         sleep(1)
         exit_option=input(print('Do you want to set another RemindeR ?(y/n) '))                                                 # Confirmation dialogue is being asked.
@@ -42,7 +42,7 @@ while(x):
                 print('Ok. The RemindeR is set for ',minutes,' minute(s)')
                 print('You can minimise the program if you need to.')
                 sleep(minutes*60)
-                winsound.PlaySound('sound.wav',winsound.SND_FILENAME)
+                winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                          # Alert sound is played through PC speaker.
                 messagebox.showinfo("Reminder",Note)                                                                           # Tkinter window displays the reminder.
                 sleep(1)
                 exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))             # Confirmation dialogue is being asked.
@@ -58,7 +58,7 @@ while(x):
                 print('Ok. The RemindeR is set after ',int(hours),' hours ',int(minutes1),' minutes ',int(seconds),' seconds')
                 print('You can minimise the program if you need to.')
                 sleep(seconds)
-                winsound.PlaySound('sound.wav',winsound.SND_FILENAME)
+                winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                          # Alert sound is played through PC speaker.
                 messagebox.showinfo("Reminder",Note)                                                                           # Tkinter window displays the reminder.
                 sleep(1)
                 exit_option=input(print('Do you want to set another RemindeR ?(y/n) "Please ignore the "None"" '))             # Confirmation dialogue is being asked.
