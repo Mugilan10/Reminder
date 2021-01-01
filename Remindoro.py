@@ -1,9 +1,9 @@
-from time import *                                                                                                                                                                     # Required for using sleep()
+from time import *                                                                                                              # Required for using sleep()
 import winsound
 import tkinter
 from tkinter import messagebox
 root=tkinter.Tk()
-root.withdraw()                                                                                                                                                                           # Creates a tkinter window in background.
+root.withdraw()                                                                                                                 # Creates a tkinter window in background / Used to create a tkinter window.
 a = True
 note = 'STOP NOW. GO. TAKE A BREAK'
 note1 = 'STOP NOW. GO. TAKE A BREAK FOR HALF AN HOUR.'
@@ -20,17 +20,17 @@ while a == True:
                 sleep(3)
                 print('START')
                 winsound.PlaySound('sound.wav',winsound.SND_FILENAME)
-                sleep(1500)                                                                                                                                                                 # Timer set for 25 minutes.
+                sleep(1500)                                                                                                     # Timer set for 25 minutes.
                 winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                                                              
-                messagebox.showinfo('Remindoro', note)                                                                                                                  # Tkinter window displayed.
-                sleep(300)                                                                                                                                                                  # Timer set for 5 minutes
+                messagebox.showinfo('Remindoro', note)                                                                          # Tkinter window displays alert for mini-break.
+                sleep(300)                                                                                                      # Timer set for 5 minutes
             print('The timer is going to start. Be ready')
             sleep(3)
             print('START')
             winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                                                    
-            sleep(1500)                                                                                                                                                                    # Timer set for 25 minutes.
+            sleep(1500)                                                                                                         # Timer set for 25 minutes.
             winsound.PlaySound('sound.wav',winsound.SND_FILENAME)                                                                         
-            messagebox.showinfo('Remindoro', note1)                                                                                                                   # Tkinter window displayed.                                                     
+            messagebox.showinfo('Remindoro', note1)                                                                             # Tkinter window displays alert for large break.                                                     
             sleep(1800)
             print('CONGRATULATIONS !!!!')
             sleep(1)
